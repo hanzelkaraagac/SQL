@@ -1,39 +1,31 @@
---DATABASE(VERITABANI) Olusturma
-Create dataBase evren;
+-- Database olusturma
+Create database techproed;
 
-create database erol;
-
---DDL - DATA DEFINITION LANGUAGE
---CREATE --TABLO OLUSTURMA
+-- DDL - DATA DEFINITION LANG.
+-- CREATE - TABLO OLUSTURMA
 CREATE TABLE ogrenciler2
 (
-ogrenci_no char(7),
-isim varchar(20),
-soyisim varchar(25),
-not_ort real, --ondalikli sayilar icin real kullanilir (Double gibi)
-kayit_tarihi date
+ogrenci_no char (7),
+isim varchar (20),
+soyisim varchar (25),
+not_ort real, -- Ondalik sayilar icin kullanilir (Double gibi)
+kayit_tarih date
 );
 
---VAR OLAN TABLODAN YENI BIR TABLO OLUSTURMA
+--VAROLAN TABLODAN YENI BIR TABLO OLUSTURMA
 CREATE TABLE ogrenci_notlari
-AS -- Benzer tablodaki basliklarla ve data tipleriyle yeni bir tablo olusturmak icin
-   -- normal tablo olustururken ki parantezler yerine AS kullanip Select komutuyla almak istedigimiz verileri aliriz.
-SELECT isim,soyisim,not_ort FROM ogrenciler1;
+AS -- Benzer tablodaki başlıklarla ve data tipleriyle yeni bir tablo oluşturmak için
+-- normal tablo oluştururken ki parantezler yerine AS kullanıp Select komutuyla almak istediğimiz verileri alırız
+SELECT isim, soyisim, not_ort FROM ogrenciler2;
 
--- DML - DATA MANUPULATION LANGUAGE
+-- DML - DATA MANUPULATION LANG.
 -- INSERT (Database'e veri ekleme)
+INSERT INTO ogrenciler2 VALUES ('1234567', 'Hanzel', 'KARAAGAC', 85.5, now ());
+INSERT INTO ogrenciler2 VALUES ('1234567', 'Hanzel', 'karaagac', 85.5,'2020-12-11') ;
 
-INSERT INTO ogrenciler1 VALUES ('1234567','Hanzel','KARAAGAC',85.5,now()); --now bugunun tarihini ekler
-INSERT INTO ogrenciler1 VALUES ('1234567','Hanzel','KARAAGAC',85.5,'2022-12-11');
-
--- BIR TABLOYA PARCALI VERI EKLEMEK ISTERSEK
-
-INSERT INTO ogrenciler1 (isim,soyisim) VALUES ('Erol','Evren');
+--BIR TABLOYA PARÇALI VERT EKLEMEK ‡STERSEK
+INSERT INTO ogrenciler2 (isim, soyisim) VALUES ('Erol', 'Evren');
 
 
--- DQL - DATA QUERY LANGUAGE
--- SELECT
-
-select * FROM ogrenciler1; -- * ==> buradaki sembol herseyi degistir demektir
-
-
+-- DQL - DATA QUERY LANG.
+SELECT * FROM ogrenciler2;
