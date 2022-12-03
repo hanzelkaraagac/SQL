@@ -215,11 +215,3 @@ INSERT INTO ogrenciler3 VALUES(127, 'Mustafa Bak', 'Ali', 99);
 
 -- ismi Nesibe Yilmaz veya Mustafa Bak olan kayıtları silelim.
 DELETE FROM ogrenciler3 WHERE isim='Nesibe Yilmaz' or isim='Mustafa Bak';
-
-
-
-
-
-
-
-
