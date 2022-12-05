@@ -133,7 +133,7 @@ FOREIGN KEY (adres_id) REFERENCES calisanlar(id)
 
 INSERT INTO calisanlar VALUES('10002', 'Mehmet Yılmaz' ,12000, '2018-04-14');
 INSERT INTO calisanlar VALUES('10008', null, 5000, '2018-04-14');
-INSERT INTO calisanlar VALUES('10010', 'Mehmet Yılmaz', 5000, '2018-04-14'); -- UNIQUE CONS. Kabul etmez
+INSERT INTO calisanlar VALUES('10010', 'Mehmet Yılmaz', 5000, '2018-04-14'); 
 INSERT INTO calisanlar VALUES('10004', 'Veli Han', 5000, '2018-04-14');
 INSERT INTO calisanlar VALUES('10005', 'Mustafa Ali', 5000, '2018-04-14');
 INSERT INTO calisanlar VALUES('10006', 'Canan Yaş', NULL, '2019-04-12'); -- NOT NULL CONS. Kabul etmez
@@ -170,9 +170,10 @@ maas int CHECK (maas>10000),
 ise_baslama date
 );
 
-INSERT INTO calisanlar1 VALUES('10002', 'Mehmet Yılmaz' ,19000, '2018-04-14');
+INSERT INTO calisanlar2 VALUES('10002', 'Mehmet Yılmaz' ,19000, '2018-04-14');
 
-SELECT * FROM calisanlar1;
+
+SELECT * FROM calisanlar2;
 
 --DQL -- WHERE KULLANIMI
 
